@@ -1,0 +1,787 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* estilo do header */
+header {
+    width: 100%;
+    padding: 30px 0;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 300px;
+}
+
+header .menu-desktop nav ul {
+    list-style-type: none;
+}
+
+header.rolagem {
+    background-color: #61113C;
+    padding: 16px 2%;
+}
+
+.menu-desktop nav ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+.menu-desktop nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    transition: 2s;
+}
+
+.menu-desktop nav a:hover {
+    transform: scale(1.05);
+}
+
+header .btn-contato button {
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px solid #ffff;
+    color: #ffff;
+    cursor: pointer;
+    transition: 2s;
+}
+
+header .btn-contato button:hover {
+    background-color: #ffff;
+    color: #000;
+}
+
+/* Estilos para dispositivos móveis (max-width: 767px) */
+@media (max-width: 767px) {
+    .menu-desktop {
+        display: none; 
+    }
+
+    .interface {
+        position: relative; 
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        background-color: transparent;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 10px; 
+        z-index: 1001; 
+    }
+
+    .mobile-menu-toggle::after {
+        content: '\2630'; 
+    }
+
+    .mobile-menu {
+        display: none; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        background-color: #61113C;
+        width: 100%;
+        text-align: center;
+        z-index: 1000; 
+    }
+
+    .mobile-menu ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .mobile-menu ul li {
+        margin: 10px 0;
+    }
+
+    .mobile-menu ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        padding: 10px 0;
+        transition: color 0.3s;
+    }
+
+    .mobile-menu ul li a:hover {
+        color: #C59075;
+    }
+
+    .mobile-menu-open {
+        display: block;
+    }
+
+    .btn-contato {
+        display: none; 
+    }
+}
+
+/* Estilos para dispositivos maiores ou iguais a 768px de largura */
+@media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none; 
+    }
+
+    .mobile-menu {
+        display: none; 
+        position: fixed;
+    }
+}
+
+
+
+
+/* estilo do hero */
+section.hero-site {
+    height: 95vh;
+    background-image: url(../img/JADY\ FACHADA_INSERCAO.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #61113C;
+}
+
+.hero-site .interface {
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
+
+.hero-site .txt-hero h1 {
+    font-size: 3em;
+    line-height: 45px;
+    font-weight: 250;
+}
+
+.hero-site .txt-hero h1 span {
+    display: block;
+    font-weight: 600;
+}
+
+.hero-site .txt-hero p {
+    font-size: 20px;
+    font-weight: 350;
+    margin: 5px 0;
+    color: #61113C;
+}
+
+.hero-site .txt-hero p span {
+    display: block;
+    color: #61113C;
+}
+
+.hero-site button {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    border: 2px solid #61113C;
+    background-color: #61113C;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hero-site button:hover {
+    background-color: #ffffff;
+    color: #61113C;
+}
+
+@media (max-width: 768px) {
+    .section.hero-site {
+        height: auto;
+        padding: 30px 10px; 
+    }
+
+    .hero-site .interface {
+        height: 50vh; 
+    }
+
+    .hero-site .txt-hero h1 {
+        font-size: 2em;
+        line-height: 35px;
+    }
+
+    .hero-site .txt-hero p {
+        font-size: 16px; 
+    }
+
+    .hero-site button {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+    .txt-hero {
+        padding: 10px; 
+
+    .section.hero-site {
+        background-image: url(../img/JADY\ FACHADA_INSERCAO.jpg); 
+        background-size: contain; 
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+/* estilo da localização */
+
+section.Localização {
+    padding: 70px 0;
+}
+
+.Localização .itens-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 100px;
+    gap: 10%;
+}
+
+.Localização .itens-container .img-itens img {
+    max-width: 400px;
+    border-radius: 20px;
+    border-right: 10px solid #C59075;
+    border-bottom: 10px solid #C59075;
+}
+
+.Localização .itens-container .txt-itens h3 {
+    font-size: 2em;
+    line-height: 35px;
+    margin-bottom: 20px;
+    color: #61113C;
+}
+
+.itens-container .txt-itens h3 span {
+    font-weight: 300;
+    color: #61113C;
+}
+
+.itens-container .txt-itens p {
+    color: #61113C;
+}
+
+.Localização .itens-container {
+    flex-direction: column; 
+    text-align: center; 
+    margin-left: 20px; 
+    margin-right: 20px;
+}
+
+.Localização .itens-container .img-itens {
+    margin-top: 20px; 
+}
+
+.Localização .itens-container .img-itens img {
+    max-width: 100%; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.Localização .itens-container .txt-itens h3 {
+    font-size: 1.5em; 
+    line-height: 30px; 
+}
+
+@media (max-width: 768px) {
+    .Localização .itens-container {
+        display: flex;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .Localização .itens-container .img-itens {
+        margin-top: 20px; 
+    }
+
+    .Localização .itens-container .img-itens img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .Localização .itens-container .txt-itens h3 {
+        font-size: 1.5em;
+        line-height: 30px;
+    }
+
+    
+}
+
+
+
+/* estilo dos botões de contato */
+section.contato {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+.txt-contato,
+.icons-contato {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.contato .txt-contato h3 {
+    font-size: 2.5em;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #61113C;
+}
+
+.contato .txt-contato h3 span {
+    display: block;
+    font-weight: 700;
+    color: #61113C;
+}
+
+.contato .icons-contato a {
+    text-decoration: none;
+}
+
+.contato .icons-contato button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 50px;
+    margin: 0 auto 20px auto;
+    padding: 0 60px;
+    background-color: transparent;
+    border: 2px solid #61113C;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.contato .icons-contato button i {
+    font-size: 20px;
+}
+
+.contato .icons-contato button:hover {
+    background-color: #61113C;
+}
+
+.contato .icons-contato button:hover i,
+.contato .icons-contato button:hover p {
+    color: #ffffff;
+}
+
+.txt-apt {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+}
+
+.txt-apt h3 {
+    font-size: 2em;
+    line-height: 35px;
+    margin-bottom: 20px;
+    color: #61113C;
+}
+
+.txt-apt h3 span {
+    font-weight: 300;
+    color: #61113C;
+}
+
+@media (max-width: 768px) {
+        .txt-contato {
+            font-size: 12px; 
+            margin-bottom: 10px; 
+            padding-left: 20px;
+        }
+
+    .txt-contato {
+        margin-bottom: 20px; 
+    }
+
+    .icons-contato {
+        flex-direction: column; 
+    }
+
+    .icons-contato a {
+        margin: 10px 0; 
+    }
+
+    .contato .icons-contato button {
+        padding: 10px; 
+    }
+
+    .contato .icons-contato button i {
+        font-size: 16px; 
+    }
+
+    .contato .icons-contato button span {
+        display: none; 
+    }
+}
+
+/* estilo carrosel */
+
+section.slides {
+    display: flex;
+    padding: 0 5px;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.wrapper {
+    max-width: 1200px;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 45px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background-color: #C59075;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper i:first-child {
+    left: -20px;
+}
+
+.wrapper i:last-child {
+    right: -20px;
+}
+
+.wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel img {
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 790px) {
+    .carousel img {
+        width: calc(100% / 1);
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .carousel img {
+        width: 100%;
+    }
+}
+
+/* plantas */
+
+section.plantas {
+    padding: auto;
+    margin-bottom: 0;
+}
+
+.plantas .itens-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 200px;
+    gap: 10%;
+    margin-top: 10px;
+}
+
+.plantas .itens-container .img-itens img {
+    max-width: 750px;
+}
+
+.plantas .itens-container .txt-itens h3 {
+    font-size: 2em;
+    line-height: 35px;
+    margin-bottom: 20px;
+    color: #61113C;
+}
+
+@media (max-width: 768px) {
+    .plantas .itens-container {
+        margin-left: 20px; 
+        margin-right: 20px; 
+    }
+
+    .plantas .itens-container .txt-itens {
+        padding: 20px; 
+    }
+
+    .plantas .itens-container .txt-itens h3 {
+        font-size: 1.2em; 
+        top: 10px; 
+    }
+
+    .plantas .itens-container .img-itens {
+        
+        width: calc(100vh - 160px); 
+        height: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plantas .itens-container .img-itens img {
+        max-width: 280%; 
+        max-height: 200%; 
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+}
+
+
+/* form */
+
+.formulario {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: #61113C;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form-image {
+    max-width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    border-right: 10px solid #61113C;
+    border-bottom: 10px solid #61113C;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #61113C;
+    margin: 5px auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-box input,
+.input-box select {
+    margin: 0.4rem 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    transition: background-color 0.3s ease;
+}
+
+.input-box input:hover,
+.input-box select:hover {
+    background-color: #eeeeee75;
+}
+
+.btn-contato button {
+    width: 280px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    border: 2px solid #61113C;
+    background-color: #61113C;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.btn-contato button:hover {
+    background-color: #ffffff;
+    color: #61113C;
+}
+
+@media (max-width: 768px) {
+    .formulario {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .form-container {
+        flex-direction: column; 
+    }
+
+    .image-container {
+        order: -1; 
+        margin-top: 20px;
+        margin-bottom: 20px; 
+        text-align: center; 
+    }
+
+    .form-image {
+        max-width: 80%; 
+        height: auto;
+        border-radius: 14px;
+        margin: 0 auto; 
+    }
+
+    .btn-contato {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .btn-contato button {
+        width: 100%;
+        max-width: 280px; 
+    }
+}
+/*rodapé */
+
+.rodape {
+    background-color: #61113C;
+    color: #fffefe;
+    padding: 30px 0;
+}
+
+.rodape .interface {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape .logo img {
+    max-width: 200px; 
+}
+
+.rodape .informacoes {
+    flex: 1;
+    margin-right: 70px;
+}
+
+.rodape .redes-sociais {
+    flex: 1;
+    text-align: right;
+}
+
+.rodape .redes-sociais .icones-redes-sociais {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rodape .redes-sociais .icones-redes-sociais a {
+    display: inline-block;
+    margin-left: 10px;
+    color: #ffffff;
+    font-size: 40px;
+    transition: color 0.3s;
+}
+
+.rodape .redes-sociais .icones-redes-sociais a:hover {
+    color: #C59075;
+}
+
+.rodape h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.rodape .direitos-autorais {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .rodape .interface {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape .informacoes, .rodape .redes-sociais {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .rodape .redes-sociais .icones-redes-sociais {
+        justify-content: center;
+    }
+
+    .rodape .redes-sociais .icones-redes-sociais a {
+        margin-left: 15px;
+    }
+}
