@@ -262,25 +262,32 @@ section.Localização {
 }
 
 .Localização .itens-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 150px;
-    margin-right: 100px;
-    gap: 10%;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+
+.Localização .itens-container .img-itens {
+    flex: 1; 
+    text-align: center; 
 }
 
 .Localização .itens-container .img-itens img {
-    max-width: 400px;
+    max-width: 50%; 
     border-radius: 20px;
     border-right: 10px solid #C59075;
     border-bottom: 10px solid #C59075;
 }
 
+.Localização .itens-container .txt-itens {
+    flex: 1; 
+}
+
 .Localização .itens-container .txt-itens h3 {
-    font-size: 2em;
-    line-height: 35px;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    line-height: 30px;
     color: #61113C;
 }
 
@@ -293,32 +300,10 @@ section.Localização {
     color: #61113C;
 }
 
-.Localização .itens-container {
-    flex-direction: column; 
-    text-align: center; 
-    margin-left: 20px; 
-    margin-right: 20px;
-}
-
-.Localização .itens-container .img-itens {
-    margin-top: 20px; 
-}
-
-.Localização .itens-container .img-itens img {
-    max-width: 100%; 
-    display: block; 
-    margin: 0 auto; 
-}
-
-.Localização .itens-container .txt-itens h3 {
-    font-size: 1.5em; 
-    line-height: 30px; 
-}
-
 @media (max-width: 768px) {
     .Localização .itens-container {
         display: flex;
-        text-align: center;
+        text-align: flex;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -340,6 +325,8 @@ section.Localização {
 
     
 }
+
+
 
 
 
@@ -572,7 +559,7 @@ section.plantas {
     }
 
     .plantas .itens-container .img-itens img {
-        max-width: 280%; 
+        max-width: 250%; 
         max-height: 200%; 
         transform: rotate(90deg);
         transform-origin: center;
